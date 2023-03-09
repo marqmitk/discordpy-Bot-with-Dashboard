@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ bot.user.name }} Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body>
+  <main class="content">
+    <div class="header">
+      <h1>Dashboard</h1>
+    </div>
+    <div class="change-prefix">
+      <h3>Current Prefix: {{ bot.command_prefix }}</h1>
+        <form action="/prefix" method="POST">
+          <input name="prefix" id="prefix" placeholder="New Prefix"></textarea>
+          <input type="submit" value="Change Prefix">
+        </form>
+    </div>
+  </main>
+  </div>
+</body>
+
+</html>
